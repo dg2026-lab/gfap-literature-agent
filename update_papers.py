@@ -1,34 +1,50 @@
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
+import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
 # ============================================================
-# SETTINGS
+# GFAP ATLAS — WEEKLY LITERATURE AGENT
 # ============================================================
 
 DATA_FILE = Path("papers.json")
 
+# Look back 14 days each week so papers that are indexed late
+# are less likely to be missed.
 LOOKBACK_DAYS = 14
+
 MAX_RESULTS_PER_SOURCE = 100
+
+
+# ============================================================
+# DATABASE URLS
+# ============================================================
 
 PUBMED_ESEARCH = (
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 )
+
 PUBMED_EFETCH = (
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 )
+
 EUROPE_PMC_SEARCH = (
     "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 )
 
-# PubMed query.
-# Search primarily in title/abstract so generic metadata matches
-# don't overwhelm the results.
+
+# ============================================================
+# SEARCH QUERIES
+# ============================================================
+
+# PubMed search is restricted to title/abstract to reduce
+# irrelevant matches.
 PUBMED_QUERY = (
     '("glial fibrillary acidic protein"[Title/Abstract] '
     'OR GFAP[Title/Abstract] '
@@ -41,9 +57,14 @@ EUROPE_PMC_QUERY = (
     'OR "Alexander disease")'
 )
 
+
+# ============================================================
+# REQUEST SETTINGS
+# ============================================================
+
 USER_AGENT = (
     "GFAP-Literature-Agent/1.0 "
-    "(weekly literature monitoring for GFAP Atlas)"
+    "(GFAP Atlas literature monitor)"
 )
 
 
@@ -51,42 +72,119 @@ USER_AGENT = (
 # GENERAL HELPERS
 # ============================================================
 
-def request_url(url):
-    """Open a URL with an identifying User-Agent."""
-
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": USER_AGENT},
-    )
-
-    with urllib.request.urlopen(
-        request,
-        timeout=60,
-    ) as response:
-        return response.read()
-
-
 def clean_text(text):
-    """Collapse whitespace and remove simple HTML tags."""
+    """Remove simple HTML tags and extra whitespace."""
 
     if not text:
         return ""
 
-    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"<[^>]+>", " ", str(text))
     return " ".join(text.split())
 
 
 def normalize_doi(doi):
+    """Normalize DOI formatting for duplicate detection."""
+
     if not doi:
         return ""
 
-    doi = doi.strip().lower()
+    doi = str(doi).strip().lower()
 
-    doi = doi.replace("https://doi.org/", "")
-    doi = doi.replace("http://doi.org/", "")
-    doi = doi.replace("doi:", "")
+    prefixes = [
+        "https://doi.org/",
+        "http://doi.org/",
+        "https://dx.doi.org/",
+        "http://dx.doi.org/",
+        "doi:",
+    ]
+
+    for prefix in prefixes:
+        if doi.startswith(prefix):
+            doi = doi[len(prefix):]
 
     return doi.strip()
+
+
+def request_url(url, retries=4, base_delay=3):
+    """
+    Make an HTTP request.
+
+    Temporary failures such as 429, 500, 502, 503, and 504
+    are retried automatically before giving up.
+    """
+
+    retryable_codes = {
+        429,
+        500,
+        502,
+        503,
+        504,
+    }
+
+    for attempt in range(retries):
+
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": (
+                    "application/json, "
+                    "application/xml, "
+                    "text/xml, */*"
+                ),
+            },
+        )
+
+        try:
+
+            with urllib.request.urlopen(
+                request,
+                timeout=60,
+            ) as response:
+
+                return response.read()
+
+        except urllib.error.HTTPError as error:
+
+            if (
+                error.code in retryable_codes
+                and attempt < retries - 1
+            ):
+
+                delay = base_delay * (2 ** attempt)
+
+                print(
+                    f"HTTP {error.code}. "
+                    f"Retrying in {delay} seconds..."
+                )
+
+                time.sleep(delay)
+                continue
+
+            raise
+
+        except (
+            urllib.error.URLError,
+            TimeoutError,
+        ) as error:
+
+            if attempt < retries - 1:
+
+                delay = base_delay * (2 ** attempt)
+
+                print(
+                    f"Network error: {error}. "
+                    f"Retrying in {delay} seconds..."
+                )
+
+                time.sleep(delay)
+                continue
+
+            raise
+
+    raise RuntimeError(
+        "Request failed after all retry attempts."
+    )
 
 
 # ============================================================
@@ -94,14 +192,14 @@ def normalize_doi(doi):
 # ============================================================
 
 def search_pubmed():
-    """
-    Search PubMed for recent GFAP literature.
-
-    Returns a list of standardized paper dictionaries.
-    """
+    """Search PubMed for recent GFAP literature."""
 
     today = datetime.now(timezone.utc).date()
-    start_date = today - timedelta(days=LOOKBACK_DAYS)
+
+    start_date = (
+        today
+        - timedelta(days=LOOKBACK_DAYS)
+    )
 
     search_params = {
         "db": "pubmed",
@@ -124,7 +222,10 @@ def search_pubmed():
     print("Searching PubMed...")
 
     raw = request_url(search_url)
-    search_data = json.loads(raw.decode("utf-8"))
+
+    search_data = json.loads(
+        raw.decode("utf-8")
+    )
 
     pmids = (
         search_data
@@ -132,7 +233,9 @@ def search_pubmed():
         .get("idlist", [])
     )
 
-    print(f"PubMed returned {len(pmids)} records.")
+    print(
+        f"PubMed returned {len(pmids)} records."
+    )
 
     if not pmids:
         return []
@@ -156,158 +259,180 @@ def search_pubmed():
 
     papers = []
 
-    for article in root.findall(".//PubmedArticle"):
+    for article in root.findall(
+        ".//PubmedArticle"
+    ):
 
-        # ----------------------------
-        # PMID
-        # ----------------------------
-
-        pmid = ""
-
-        pmid_element = article.find(
-            ".//MedlineCitation/PMID"
+        paper = parse_pubmed_article(
+            article
         )
 
-        if pmid_element is not None:
-            pmid = clean_text(
-                "".join(pmid_element.itertext())
-            )
-
-        # ----------------------------
-        # Title
-        # ----------------------------
-
-        title_element = article.find(
-            ".//Article/ArticleTitle"
-        )
-
-        title = ""
-
-        if title_element is not None:
-            title = clean_text(
-                "".join(title_element.itertext())
-            )
-
-        # ----------------------------
-        # Abstract
-        # ----------------------------
-
-        abstract_parts = []
-
-        for abstract_element in article.findall(
-            ".//Article/Abstract/AbstractText"
-        ):
-            section_text = clean_text(
-                "".join(abstract_element.itertext())
-            )
-
-            label = abstract_element.attrib.get(
-                "Label",
-                "",
-            )
-
-            if label and section_text:
-                abstract_parts.append(
-                    f"{label}: {section_text}"
-                )
-            elif section_text:
-                abstract_parts.append(section_text)
-
-        abstract = " ".join(abstract_parts)
-
-        # ----------------------------
-        # Authors
-        # ----------------------------
-
-        authors = []
-
-        for author in article.findall(
-            ".//Article/AuthorList/Author"
-        ):
-            collective = author.findtext(
-                "CollectiveName"
-            )
-
-            if collective:
-                authors.append(
-                    clean_text(collective)
-                )
-                continue
-
-            last_name = author.findtext(
-                "LastName"
-            ) or ""
-
-            initials = author.findtext(
-                "Initials"
-            ) or ""
-
-            name = " ".join(
-                part
-                for part in [last_name, initials]
-                if part
-            )
-
-            if name:
-                authors.append(name)
-
-        author_string = ", ".join(authors)
-
-        # ----------------------------
-        # Journal
-        # ----------------------------
-
-        journal = clean_text(
-            article.findtext(
-                ".//Article/Journal/Title"
-            )
-            or ""
-        )
-
-        # ----------------------------
-        # DOI
-        # ----------------------------
-
-        doi = ""
-
-        for article_id in article.findall(
-            ".//PubmedData/ArticleIdList/ArticleId"
-        ):
-            if (
-                article_id.attrib.get("IdType")
-                == "doi"
-            ):
-                doi = normalize_doi(
-                    article_id.text or ""
-                )
-                break
-
-        # ----------------------------
-        # Publication date
-        # ----------------------------
-
-        pub_date = extract_pubmed_date(article)
-
-        papers.append(
-            {
-                "source": "PubMed",
-                "pmid": pmid,
-                "doi": doi,
-                "title": title,
-                "authors": author_string,
-                "journal": journal,
-                "date": pub_date,
-                "abstract": abstract,
-            }
-        )
+        if paper["title"]:
+            papers.append(paper)
 
     return papers
 
 
+def parse_pubmed_article(article):
+    """Convert one PubMed record into our standard format."""
+
+    # PMID
+    pmid = ""
+
+    pmid_element = article.find(
+        ".//MedlineCitation/PMID"
+    )
+
+    if pmid_element is not None:
+
+        pmid = clean_text(
+            "".join(
+                pmid_element.itertext()
+            )
+        )
+
+    # Title
+    title = ""
+
+    title_element = article.find(
+        ".//Article/ArticleTitle"
+    )
+
+    if title_element is not None:
+
+        title = clean_text(
+            "".join(
+                title_element.itertext()
+            )
+        )
+
+    # Abstract
+    abstract_parts = []
+
+    for abstract_element in article.findall(
+        ".//Article/Abstract/AbstractText"
+    ):
+
+        section_text = clean_text(
+            "".join(
+                abstract_element.itertext()
+            )
+        )
+
+        label = clean_text(
+            abstract_element.attrib.get(
+                "Label",
+                "",
+            )
+        )
+
+        if not section_text:
+            continue
+
+        if label:
+            abstract_parts.append(
+                f"{label}: {section_text}"
+            )
+        else:
+            abstract_parts.append(
+                section_text
+            )
+
+    abstract = " ".join(
+        abstract_parts
+    )
+
+    # Authors
+    authors = []
+
+    for author in article.findall(
+        ".//Article/AuthorList/Author"
+    ):
+
+        collective = author.findtext(
+            "CollectiveName"
+        )
+
+        if collective:
+
+            authors.append(
+                clean_text(collective)
+            )
+
+            continue
+
+        last_name = clean_text(
+            author.findtext("LastName")
+            or ""
+        )
+
+        initials = clean_text(
+            author.findtext("Initials")
+            or ""
+        )
+
+        name = " ".join(
+            item
+            for item in [
+                last_name,
+                initials,
+            ]
+            if item
+        )
+
+        if name:
+            authors.append(name)
+
+    author_string = ", ".join(
+        authors
+    )
+
+    # Journal
+    journal = clean_text(
+        article.findtext(
+            ".//Article/Journal/Title"
+        )
+        or ""
+    )
+
+    # DOI
+    doi = ""
+
+    for article_id in article.findall(
+        ".//PubmedData/ArticleIdList/ArticleId"
+    ):
+
+        if (
+            article_id.attrib.get("IdType")
+            == "doi"
+        ):
+
+            doi = normalize_doi(
+                article_id.text or ""
+            )
+
+            break
+
+    # Publication date
+    pub_date = extract_pubmed_date(
+        article
+    )
+
+    return {
+        "source": "PubMed",
+        "sources": ["PubMed"],
+        "pmid": pmid,
+        "doi": doi,
+        "title": title,
+        "authors": author_string,
+        "journal": journal,
+        "date": pub_date,
+        "abstract": abstract,
+    }
+
+
 def extract_pubmed_date(article):
-    """
-    Try several PubMed date locations.
-    """
+    """Extract the best available PubMed publication date."""
 
     year = article.findtext(
         ".//Article/Journal/JournalIssue/PubDate/Year"
@@ -326,6 +451,7 @@ def extract_pubmed_date(article):
     )
 
     if year:
+
         parts = [year]
 
         if month:
@@ -347,12 +473,16 @@ def extract_pubmed_date(article):
 # ============================================================
 
 def search_europe_pmc():
-    """
-    Search Europe PMC for recent GFAP literature.
-    """
+    """Search Europe PMC for recent GFAP literature."""
 
-    today = datetime.now(timezone.utc).date()
-    start_date = today - timedelta(days=LOOKBACK_DAYS)
+    today = datetime.now(
+        timezone.utc
+    ).date()
+
+    start_date = (
+        today
+        - timedelta(days=LOOKBACK_DAYS)
+    )
 
     query = (
         f'{EUROPE_PMC_QUERY} '
@@ -378,7 +508,10 @@ def search_europe_pmc():
     print("Searching Europe PMC...")
 
     raw = request_url(url)
-    data = json.loads(raw.decode("utf-8"))
+
+    data = json.loads(
+        raw.decode("utf-8")
+    )
 
     results = (
         data
@@ -395,118 +528,215 @@ def search_europe_pmc():
 
     for result in results:
 
-        papers.append(
-            {
-                "source": "Europe PMC",
+        paper = {
+            "source": "Europe PMC",
 
-                "pmid": str(
-                    result.get("pmid", "")
-                    or ""
-                ),
+            "sources": [
+                "Europe PMC"
+            ],
 
-                "doi": normalize_doi(
-                    result.get("doi", "")
-                    or ""
-                ),
+            "pmid": str(
+                result.get("pmid", "")
+                or ""
+            ),
 
-                "title": clean_text(
-                    result.get("title", "")
-                    or ""
-                ),
+            "doi": normalize_doi(
+                result.get("doi", "")
+                or ""
+            ),
 
-                "authors": clean_text(
-                    result.get("authorString", "")
-                    or ""
-                ),
+            "title": clean_text(
+                result.get("title", "")
+                or ""
+            ),
 
-                "journal": clean_text(
-                    result.get("journalTitle", "")
-                    or ""
-                ),
+            "authors": clean_text(
+                result.get(
+                    "authorString",
+                    "",
+                )
+                or ""
+            ),
 
-                "date": (
-                    result.get(
-                        "firstPublicationDate",
-                        "",
-                    )
-                    or ""
-                ),
+            "journal": clean_text(
+                result.get(
+                    "journalTitle",
+                    "",
+                )
+                or ""
+            ),
 
-                "abstract": clean_text(
-                    result.get(
-                        "abstractText",
-                        "",
-                    )
-                    or ""
-                ),
-            }
-        )
+            "date": clean_text(
+                result.get(
+                    "firstPublicationDate",
+                    "",
+                )
+                or ""
+            ),
+
+            "abstract": clean_text(
+                result.get(
+                    "abstractText",
+                    "",
+                )
+                or ""
+            ),
+        }
+
+        if paper["title"]:
+            papers.append(paper)
 
     return papers
 
 
 # ============================================================
-# MERGING / DEDUPLICATION
+# SAFE SEARCHING
+# ============================================================
+
+def safe_search_pubmed():
+    """
+    If PubMed temporarily fails, allow Europe PMC
+    to continue independently.
+    """
+
+    try:
+
+        return search_pubmed()
+
+    except Exception as error:
+
+        print("")
+        print(
+            "WARNING: PubMed search failed."
+        )
+
+        print(
+            f"PubMed error: {error}"
+        )
+
+        print(
+            "Continuing with Europe PMC "
+            "if available."
+        )
+        print("")
+
+        return []
+
+
+def safe_search_europe_pmc():
+    """
+    If Europe PMC temporarily fails, allow PubMed
+    to continue independently.
+    """
+
+    try:
+
+        return search_europe_pmc()
+
+    except Exception as error:
+
+        print("")
+        print(
+            "WARNING: Europe PMC search failed."
+        )
+
+        print(
+            f"Europe PMC error: {error}"
+        )
+
+        print(
+            "Continuing with PubMed "
+            "if available."
+        )
+        print("")
+
+        return []
+
+
+# ============================================================
+# MERGING AND DUPLICATES
 # ============================================================
 
 def paper_key(paper):
-    """
-    Create the best identifier available.
+    """Generate the best available identifier for a paper."""
 
-    PMID is preferred because PubMed and Europe PMC
-    commonly share it.
-    """
-
-    if paper.get("pmid"):
-        return "pmid:" + paper["pmid"]
-
-    if paper.get("doi"):
-        return "doi:" + normalize_doi(
-            paper["doi"]
-        )
-
-    return (
-        "title:"
-        + paper.get("title", "").lower().strip()
+    pmid = clean_text(
+        paper.get("pmid", "")
     )
 
+    doi = normalize_doi(
+        paper.get("doi", "")
+    )
 
-def merge_papers(pubmed, europe_pmc):
+    title = clean_text(
+        paper.get("title", "")
+    ).lower()
+
+    if pmid:
+        return "pmid:" + pmid
+
+    if doi:
+        return "doi:" + doi
+
+    return "title:" + title
+
+
+def merge_papers(
+    pubmed_papers,
+    europe_pmc_papers,
+):
     """
-    Merge duplicate records.
+    Merge PubMed and Europe PMC records.
 
-    If Europe PMC has an abstract that PubMed lacks,
-    or vice versa, keep the richer metadata.
+    A paper found by both services appears only once.
     """
 
     merged = {}
 
-    for paper in pubmed + europe_pmc:
-
-        key = paper_key(paper)
+    for paper in (
+        pubmed_papers
+        + europe_pmc_papers
+    ):
 
         if not paper.get("title"):
             continue
 
+        key = paper_key(paper)
+
         if key not in merged:
+
             merged[key] = paper.copy()
-            merged[key]["sources"] = [
-                paper["source"]
-            ]
+
+            merged[key]["sources"] = list(
+                dict.fromkeys(
+                    paper.get(
+                        "sources",
+                        [paper.get("source", "")],
+                    )
+                )
+            )
+
             continue
 
         existing = merged[key]
 
-        if (
-            paper["source"]
-            not in existing["sources"]
+        for source in paper.get(
+            "sources",
+            [paper.get("source", "")],
         ):
-            existing["sources"].append(
-                paper["source"]
-            )
 
-        # Prefer whichever source has more complete data.
+            if (
+                source
+                and source
+                not in existing["sources"]
+            ):
 
+                existing[
+                    "sources"
+                ].append(source)
+
+        # Keep whichever database has the more complete
+        # value for each field.
         for field in [
             "abstract",
             "authors",
@@ -516,59 +746,66 @@ def merge_papers(pubmed, europe_pmc):
             "doi",
         ]:
 
-            existing_value = (
+            old_value = str(
                 existing.get(field, "")
                 or ""
             )
 
-            new_value = (
+            new_value = str(
                 paper.get(field, "")
                 or ""
             )
 
             if (
-                len(str(new_value))
-                > len(str(existing_value))
+                len(new_value)
+                > len(old_value)
             ):
-                existing[field] = new_value
 
-    return list(merged.values())
+                existing[field] = (
+                    new_value
+                )
+
+    return list(
+        merged.values()
+    )
 
 
 # ============================================================
-# GFAP RELEVANCE
+# GFAP RELEVANCE SCORING
 # ============================================================
 
 def relevance_score(paper):
+    """
+    Rank papers for GFAP Atlas.
 
-    title = paper.get(
-        "title",
-        "",
+    Direct Alexander disease / GFAP research ranks
+    above generic biomarker or staining papers.
+    """
+
+    title = clean_text(
+        paper.get("title", "")
     ).lower()
 
-    abstract = paper.get(
-        "abstract",
-        "",
+    abstract = clean_text(
+        paper.get("abstract", "")
     ).lower()
 
-    text = title + " " + abstract
+    text = (
+        title
+        + " "
+        + abstract
+    )
 
     score = 0
 
-    # ----------------------------
-    # Highest priority
-    # ----------------------------
-
+    # Alexander disease — highest priority
     if "alexander disease" in text:
         score += 20
 
     if "alexander disease" in title:
         score += 10
 
-    # ----------------------------
     # Direct GFAP focus
-    # ----------------------------
-
     if "gfap" in title:
         score += 8
 
@@ -587,17 +824,16 @@ def relevance_score(paper):
     ):
         score += 3
 
-    # ----------------------------
     # Variants / genetics
-    # ----------------------------
-
     genetics_terms = [
         "mutation",
         "mutations",
         "variant",
         "variants",
         "genotype",
+        "genotypes",
         "pathogenic",
+        "missense",
     ]
 
     if any(
@@ -606,10 +842,7 @@ def relevance_score(paper):
     ):
         score += 6
 
-    # ----------------------------
     # Aggregation
-    # ----------------------------
-
     aggregation_terms = [
         "aggregation",
         "aggregate",
@@ -624,33 +857,23 @@ def relevance_score(paper):
     ):
         score += 6
 
-    # ----------------------------
     # Intermediate filament biology
-    # ----------------------------
-
     if "intermediate filament" in text:
         score += 5
 
-    # ----------------------------
     # Astrocyte biology
-    # ----------------------------
-
     if (
         "astrocyte" in text
         or "astrocytes" in text
     ):
         score += 2
 
-    # ----------------------------
     # Biomarker papers
-    # ----------------------------
-
     if "biomarker" in text:
         score += 1
 
-    # Penalize papers where GFAP is likely only
-    # a generic staining marker.
-
+    # Reduce ranking of papers where GFAP appears to
+    # simply be a generic staining marker.
     generic_marker_terms = [
         "immunohistochemistry",
         "immunostaining",
@@ -659,8 +882,14 @@ def relevance_score(paper):
 
     if (
         "gfap" not in title
-        and "alexander disease" not in title
-        and any(
+        and
+        "glial fibrillary acidic protein"
+        not in title
+        and
+        "alexander disease"
+        not in title
+        and
+        any(
             term in text
             for term in generic_marker_terms
         )
@@ -670,12 +899,20 @@ def relevance_score(paper):
     return score
 
 
+# ============================================================
+# TOPICS
+# ============================================================
+
 def determine_topics(paper):
 
     text = (
-        paper.get("title", "")
+        clean_text(
+            paper.get("title", "")
+        )
         + " "
-        + paper.get("abstract", "")
+        + clean_text(
+            paper.get("abstract", "")
+        )
     ).lower()
 
     topics = []
@@ -685,18 +922,29 @@ def determine_topics(paper):
             "Alexander disease"
         )
 
-    if (
-        "mutation" in text
-        or "variant" in text
+    if any(
+        term in text
+        for term in [
+            "mutation",
+            "mutations",
+            "variant",
+            "variants",
+            "missense",
+        ]
     ):
         topics.append(
             "GFAP variants"
         )
 
-    if (
-        "aggregation" in text
-        or "aggregate" in text
-        or "rosenthal fiber" in text
+    if any(
+        term in text
+        for term in [
+            "aggregation",
+            "aggregate",
+            "aggregates",
+            "rosenthal fiber",
+            "rosenthal fibers",
+        ]
     ):
         topics.append(
             "GFAP aggregation"
@@ -727,40 +975,55 @@ def determine_topics(paper):
 
 
 # ============================================================
-# SUMMARIES
+# SUMMARY
 # ============================================================
 
 def create_summary(abstract):
     """
-    Temporary non-AI summary.
+    Use text from the real abstract for now.
 
-    Uses the actual abstract so that the initial version
-    cannot hallucinate a scientific conclusion.
+    We will add true AI-generated summaries separately
+    after the core literature pipeline is confirmed stable.
     """
 
-    abstract = clean_text(abstract)
+    abstract = clean_text(
+        abstract
+    )
 
     if not abstract:
+
         return (
             "Abstract not available through "
             "PubMed or Europe PMC."
         )
-
-    # Try to use roughly the first 2 sentences.
 
     sentences = re.split(
         r"(?<=[.!?])\s+",
         abstract,
     )
 
+    sentences = [
+        sentence.strip()
+        for sentence in sentences
+        if sentence.strip()
+    ]
+
     if len(sentences) >= 2:
+
         summary = " ".join(
             sentences[:2]
         )
+
+    elif sentences:
+
+        summary = sentences[0]
+
     else:
+
         summary = abstract
 
     if len(summary) > 650:
+
         summary = (
             summary[:647]
             .rsplit(" ", 1)[0]
@@ -770,34 +1033,56 @@ def create_summary(abstract):
     return summary
 
 
+# ============================================================
+# WHY IT MATTERS
+# ============================================================
+
 def why_it_matters(paper):
 
     text = (
-        paper.get("title", "")
+        clean_text(
+            paper.get("title", "")
+        )
         + " "
-        + paper.get("abstract", "")
+        + clean_text(
+            paper.get("abstract", "")
+        )
     ).lower()
 
     if "alexander disease" in text:
+
         return (
             "Directly relevant to Alexander disease "
             "and GFAP-associated disease biology."
         )
 
-    if (
-        "mutation" in text
-        or "variant" in text
+    if any(
+        term in text
+        for term in [
+            "mutation",
+            "mutations",
+            "variant",
+            "variants",
+            "missense",
+        ]
     ):
+
         return (
             "Relevant to GFAP variants and their "
             "potential molecular or clinical effects."
         )
 
-    if (
-        "aggregation" in text
-        or "aggregate" in text
-        or "rosenthal fiber" in text
+    if any(
+        term in text
+        for term in [
+            "aggregation",
+            "aggregate",
+            "aggregates",
+            "rosenthal fiber",
+            "rosenthal fibers",
+        ]
     ):
+
         return (
             "Relevant to GFAP aggregation, "
             "Rosenthal fibers, or intermediate "
@@ -805,6 +1090,7 @@ def why_it_matters(paper):
         )
 
     if "intermediate filament" in text:
+
         return (
             "Relevant to the molecular biology "
             "of GFAP as an intermediate filament."
@@ -814,19 +1100,22 @@ def why_it_matters(paper):
         "astrocyte" in text
         or "astrocytes" in text
     ):
+
         return (
             "Relevant to GFAP-associated "
             "astrocyte biology."
         )
 
     if "biomarker" in text:
+
         return (
-            "Relevant to the use of GFAP as a "
-            "neurological biomarker."
+            "Relevant to the use of GFAP as "
+            "a neurological biomarker."
         )
 
     return (
-        "Relevant to current research involving GFAP."
+        "Relevant to current research "
+        "involving GFAP."
     )
 
 
@@ -837,21 +1126,53 @@ def why_it_matters(paper):
 def load_existing_data():
 
     if not DATA_FILE.exists():
+
         return {
             "last_updated": "",
             "weeks": [],
         }
 
-    with open(
-        DATA_FILE,
-        "r",
-        encoding="utf-8",
-    ) as file:
+    try:
 
-        return json.load(file)
+        with open(
+            DATA_FILE,
+            "r",
+            encoding="utf-8",
+        ) as file:
+
+            data = json.load(file)
+
+    except (
+        json.JSONDecodeError,
+        OSError,
+    ) as error:
+
+        raise RuntimeError(
+            "papers.json could not be read. "
+            "The existing archive was not modified."
+        ) from error
+
+    if not isinstance(data, dict):
+
+        raise RuntimeError(
+            "papers.json does not contain "
+            "the expected JSON structure."
+        )
+
+    if not isinstance(
+        data.get("weeks"),
+        list,
+    ):
+
+        data["weeks"] = []
+
+    return data
 
 
 def existing_paper_ids(data):
+    """
+    Collect PMIDs and DOIs from all PREVIOUS weeks.
+    """
 
     identifiers = set()
 
@@ -865,61 +1186,77 @@ def existing_paper_ids(data):
             [],
         ):
 
-            if paper.get("pmid"):
+            pmid = clean_text(
+                paper.get("pmid", "")
+            )
+
+            doi = normalize_doi(
+                paper.get("doi", "")
+            )
+
+            if pmid:
+
                 identifiers.add(
-                    "pmid:" + paper["pmid"]
+                    "pmid:" + pmid
                 )
 
-            if paper.get("doi"):
+            if doi:
+
                 identifiers.add(
-                    "doi:"
-                    + normalize_doi(
-                        paper["doi"]
-                    )
+                    "doi:" + doi
                 )
 
     return identifiers
 
 
-def already_seen(paper, identifiers):
+def already_seen(
+    paper,
+    identifiers,
+):
 
-    if paper.get("pmid"):
-        if (
-            "pmid:" + paper["pmid"]
-            in identifiers
-        ):
-            return True
+    pmid = clean_text(
+        paper.get("pmid", "")
+    )
 
-    if paper.get("doi"):
-        if (
-            "doi:"
-            + normalize_doi(paper["doi"])
-            in identifiers
-        ):
-            return True
+    doi = normalize_doi(
+        paper.get("doi", "")
+    )
+
+    if (
+        pmid
+        and
+        "pmid:" + pmid
+        in identifiers
+    ):
+        return True
+
+    if (
+        doi
+        and
+        "doi:" + doi
+        in identifiers
+    ):
+        return True
 
     return False
 
 
 # ============================================================
-# FINAL RECORD
+# FINAL PAPER RECORD
 # ============================================================
 
 def prepare_paper(paper):
 
-    pmid = paper.get(
-        "pmid",
-        "",
+    pmid = clean_text(
+        paper.get("pmid", "")
     )
 
     doi = normalize_doi(
-        paper.get(
-            "doi",
-            "",
-        )
+        paper.get("doi", "")
     )
 
     if pmid:
+
         url = (
             "https://pubmed.ncbi.nlm.nih.gov/"
             + pmid
@@ -927,33 +1264,31 @@ def prepare_paper(paper):
         )
 
     elif doi:
+
         url = (
             "https://doi.org/"
             + doi
         )
 
     else:
+
         url = ""
 
     return {
-        "title": paper.get(
-            "title",
-            "",
+        "title": clean_text(
+            paper.get("title", "")
         ),
 
-        "authors": paper.get(
-            "authors",
-            "",
+        "authors": clean_text(
+            paper.get("authors", "")
         ),
 
-        "journal": paper.get(
-            "journal",
-            "",
+        "journal": clean_text(
+            paper.get("journal", "")
         ),
 
-        "date": paper.get(
-            "date",
-            "",
+        "date": clean_text(
+            paper.get("date", "")
         ),
 
         "pmid": pmid,
@@ -964,7 +1299,7 @@ def prepare_paper(paper):
 
         "sources": paper.get(
             "sources",
-            [paper.get("source", "")],
+            [],
         ),
 
         "topics": determine_topics(
@@ -989,42 +1324,128 @@ def prepare_paper(paper):
 
 
 # ============================================================
+# WEEK LABELS
+# ============================================================
+
+def current_week_label(today):
+    """
+    Use Monday as the beginning of each weekly archive entry.
+
+    Example:
+    Week of September 28, 2026
+    """
+
+    monday = (
+        today
+        - timedelta(
+            days=today.weekday()
+        )
+    )
+
+    return (
+        "Week of "
+        + monday.strftime(
+            "%B %d, %Y"
+        )
+    )
+
+
+def remove_current_week(
+    data,
+    week_label,
+):
+    """
+    If the workflow runs more than once in the same week,
+    replace that week's entry instead of duplicating it.
+    """
+
+    data["weeks"] = [
+        week
+        for week in data.get(
+            "weeks",
+            [],
+        )
+        if week.get("week")
+        != week_label
+    ]
+
+
+# ============================================================
 # MAIN
 # ============================================================
 
 def main():
 
+    print("")
     print(
-        "\nGFAP Literature Agent"
+        "GFAP Literature Agent"
     )
-
     print(
-        "=====================\n"
+        "====================="
     )
+    print("")
 
-    # Search both databases.
-
-    pubmed_results = search_pubmed()
+    # Search each database independently.
+    pubmed_results = (
+        safe_search_pubmed()
+    )
 
     europe_pmc_results = (
-        search_europe_pmc()
+        safe_search_europe_pmc()
     )
 
-    # Merge and deduplicate.
+    # Protect the archive if both databases fail.
+    if (
+        not pubmed_results
+        and
+        not europe_pmc_results
+    ):
 
+        raise RuntimeError(
+            "Neither PubMed nor Europe PMC "
+            "returned usable results. "
+            "papers.json was left unchanged."
+        )
+
+    # Merge results.
     merged = merge_papers(
         pubmed_results,
         europe_pmc_results,
     )
 
+    print("")
     print(
-        f"\n{len(merged)} unique papers "
-        f"after merging databases."
+        f"{len(merged)} unique papers "
+        f"after merging sources."
     )
 
-    # Load archive.
+    if not merged:
 
+        raise RuntimeError(
+            "No papers remained after merging. "
+            "papers.json was left unchanged."
+        )
+
+    # Load archive.
     data = load_existing_data()
+
+    now = datetime.now(
+        timezone.utc
+    )
+
+    today = now.date()
+
+    week_label = (
+        current_week_label(today)
+    )
+
+    # Remove the current week before checking previous papers.
+    # This makes same-week reruns refresh the week rather than
+    # creating duplicates.
+    remove_current_week(
+        data,
+        week_label,
+    )
 
     old_ids = existing_paper_ids(
         data
@@ -1044,7 +1465,7 @@ def main():
             paper
         )
 
-        # Remove extremely weak matches.
+        # Exclude extremely weak matches.
         if score < 2:
             continue
 
@@ -1053,28 +1474,23 @@ def main():
         )
 
     # Highest relevance first.
-
     new_papers.sort(
         key=lambda paper: (
-            paper["relevance_score"],
-            paper["date"],
+            paper.get(
+                "relevance_score",
+                0,
+            ),
+            paper.get(
+                "date",
+                "",
+            ),
         ),
         reverse=True,
     )
 
-    now = datetime.now(
-        timezone.utc
-    )
-
-    today = now.date()
-
+    # Create this week's entry.
     week_entry = {
-        "week": (
-            "Week of "
-            + today.strftime(
-                "%B %d, %Y"
-            )
-        ),
+        "week": week_label,
 
         "generated": (
             now.isoformat()
@@ -1086,8 +1502,6 @@ def main():
 
         "papers": new_papers,
     }
-
-    # Put newest week first.
 
     data.setdefault(
         "weeks",
@@ -1104,7 +1518,6 @@ def main():
     )
 
     # Save.
-
     with open(
         DATA_FILE,
         "w",
@@ -1118,9 +1531,15 @@ def main():
             ensure_ascii=False,
         )
 
+    # Console report.
+    print("")
     print(
-        f"\nAdded {len(new_papers)} "
-        f"new papers."
+        f"Created {week_label}"
+    )
+
+    print(
+        f"Added {len(new_papers)} "
+        f"new relevant papers."
     )
 
     print(
@@ -1129,18 +1548,43 @@ def main():
 
     if new_papers:
 
+        print("")
         print(
-            "\nHighest-ranked papers:"
+            "Highest-ranked papers:"
         )
 
-        for paper in new_papers[:5]:
+        for paper in new_papers[:10]:
 
+            print("")
             print(
-                f"\n"
-                f"[{paper['relevance_score']}] "
+                f"[Score "
+                f"{paper['relevance_score']}] "
                 f"{paper['title']}"
             )
 
+            if paper["pmid"]:
+
+                print(
+                    "PMID: "
+                    + paper["pmid"]
+                )
+
+            if paper["doi"]:
+
+                print(
+                    "DOI: "
+                    + paper["doi"]
+                )
+
+    print("")
+    print(
+        "GFAP literature update complete."
+    )
+
+
+# ============================================================
+# RUN
+# ============================================================
 
 if __name__ == "__main__":
     main()
