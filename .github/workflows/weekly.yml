@@ -1,0 +1,42 @@
+name: Update GFAP Literature
+
+on:
+  # Run automatically every Friday at 8:00 AM Eastern
+  # 12:00 UTC corresponds to 8 AM EDT.
+  schedule:
+    - cron: "0 12 * * 5"
+
+  # Also gives us a button to run it manually.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-literature:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Search for new GFAP papers
+        run: python update_papers.py
+
+      - name: Save updated literature log
+        run: |
+          git config user.name "GFAP Literature Agent"
+          git config user.email "actions@github.com"
+          git add papers.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to save."
+          else
+            git commit -m "Update weekly GFAP literature"
+            git push
+          fi
