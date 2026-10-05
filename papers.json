@@ -1,6 +1,125 @@
 {
-  "last_updated": "2026-10-02T12:13:12.668320+00:00",
+  "last_updated": "2026-10-05T14:21:09.684945+00:00",
   "weeks": [
+    {
+      "week": "Week of October 05, 2026",
+      "generated": "2026-10-05T14:21:09.684945+00:00",
+      "paper_count": 7,
+      "papers": [
+        {
+          "title": "Evaluation of plasma neurofilament and glial fibrillary acidic protein to predict or detect amyloid related imaging abnormalities.",
+          "authors": "Schwartz Nicholas U, Ellingson Tara, Nguyen Hong, Lin Zoe, Ashton Nicholas J, Dage Jeffrey L, Deniz Kaancan, Dietz Connor D, Ljubenkov Peter A, Miller Bruce L, Nael Kambiz, Possin Katherine, Rojas Julio C, Rosen Howie J, Saloner Rowan, Soleimani-Meigooni David N, Staffaroni Adam M, Stephens Melanie L, Tammewar Gautam, Wang Yingbing, La Joie Renaud, Rabinovici Gil D, Boxer Adam L, VandeVrede Lawren",
+          "journal": "Alzheimer's & dementia (Amsterdam, Netherlands)",
+          "date": "2026-09-30",
+          "pmid": "42824090",
+          "doi": "10.1002/dad2.70446",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42824090/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 22,
+          "summary": "INTRODUCTION: Amyloid-targeting therapies (ATT) require frequent magnetic resonance imaging monitoring to detect vasogenic edema and hemorrhage, i.e., amyloid-related imaging abnormalities (ARIA). Neurofilament light chain (NfL) and glial fibrillary acidic protein (GFAP) are potential blood-based biomarkers (BBM) of ARIA.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Multi-target Triazole-Benzopyrone hybrids modulating cholinergic dysfunction, oxidative stress, and neuroinflammation through GFAP/NF-κB/APOE/NLRP3 axis in Alzheimer's disease.",
+          "authors": "El-Mokaddem Omar K, Elmasry Ghada F, Salama Abeer, Mansour Heba M, Mahmoud Walaa R, Ghany Lina M A Abdel",
+          "journal": "European journal of medicinal chemistry",
+          "date": "2026-05-13",
+          "pmid": "42150247",
+          "doi": "10.1016/j.ejmech.2026.118949",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42150247/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 16,
+          "summary": "Alzheimer's disease (AD) is a degenerative neurological disorder characterized by a deterioration in cognitive abilities, especially memory and learning. The main aim of this study is to evaluate the effects of our agents on oxidative stress, neuroinflammation, cognitive function, and behavioral performance in an LPS-induced AD animal model and comprehensive in vitro and in vivo assays.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "In vivo multimodal PET/MRI imaging and plasma biomarkers implicate glymphatic dysfunction linking neuroinflammation to tau pathology in the early Alzheimer's disease continuum.",
+          "authors": "Xu Xinru, Liu Dongming, Sun Xun, Yang Kaichen, Lv Pin, Lu Jiaming, Ruan Weiwei, Xia Xiaotian, Chen Jiu, Chen Yingxin, Wang Haocheng, Wu Xi, Ge Danni, Yang Biao, Wan Mengyu, Liang Hengyan, Lan Xiaoli, Gai Yongkang, Zhang Bing",
+          "journal": "European journal of nuclear medicine and molecular imaging",
+          "date": "2026-07-17",
+          "pmid": "42463967",
+          "doi": "10.1007/s00259-026-08067-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42463967/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "PURPOSE: Neuroinflammation is a key factor contributing to cognitive decline in Alzheimer's disease (AD). This study aims to investigate the mechanistic associations among neuroinflammation, glymphatic dysfunction, tau pathology, and cognitive decline in AD spectrum.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Choroid plexus enlargement in Post-COVID-19 syndrome is linked to Serum-Induced cytokine secretion in human hippocampal progenitors.",
+          "authors": "Martins Daniel, Mariani Nicole, Schubert Julia, Eiff Brandi, Rota Silvia, Nicholson Timothy, Hampshire Adam, Veronese Mattia, Williams Steven C R, Mondelli Valeria, Pariante Carmine, Borsini Alessandra, Turkheimer Federico",
+          "journal": "Brain, behavior, and immunity",
+          "date": "2026-10-02",
+          "pmid": "42826923",
+          "doi": "10.1016/j.bbi.2026.107038",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42826923/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "BACKGROUND: Post-COVID-19 syndrome (PCS) is characterised by persistent cognitive, affective, and somatic symptoms that extend months beyond acute SARS-CoV-2 infection, frequently in the absence of overt systemic inflammation. While immune dysregulation is increasingly implicated, the mechanisms linking peripheral immune alterations to enduring brain-related symptoms remain poorly understood.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Silibinin Alleviates Cognitive Dysfunction, Biochemical Alterations, and Hippocampal Structural Changes Induced by 5 days of Sleep Deprivation with or Without a Subsequent 24-H Recovery in Rats.",
+          "authors": "El Agamy Dalia Fathy, El-Roghy Eman Shehata, Hendia Esam Omar, Said Omnia Mohamed Abo, Gaafer Ahmed Mohamed",
+          "journal": "Molecular neurobiology",
+          "date": "2026-10-03",
+          "pmid": "42828594",
+          "doi": "10.1007/s12035-026-06195-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42828594/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "Sleep deprivation (SD) impairs cognitive function through oxidative stress, neuroinflammation, and neuroendocrine dysregulation, whereas recovery sleep may not fully reverse these alterations. Silibinin possesses antioxidant, anti-inflammatory, and neuroprotective properties; however, its potential to facilitate recovery following prolonged SD remains unclear.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Neuroinflammation as a Final Common Pathway in Systemic Disease - How Systemic Disease Becomes Brain Disease.",
+          "authors": "Gaitan Alvaro Andres, de Azevedo Pereira Annelise Velasco, Romero Javier, Lopez-Yunez Alfredo",
+          "journal": "Current neurology and neuroscience reports",
+          "date": "2026-10-03",
+          "pmid": "42828592",
+          "doi": "10.1007/s11910-026-01512-3",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42828592/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "PURPOSE OF REVIEW: This chapter reviews evidence that neuroinflammation constitutes a final common pathway linking systemic disease of diverse origin to a shared spectrum of CNS injury, and synthesizes its mechanistic, biomarker, and therapeutic implications. RECENT FINDINGS: Autoimmune, infectious, metabolic, malignant, and age-related diseases converge on five shared CNS mechanisms-blood-brain barrier disruption, microglial priming, complement-mediated synaptic injury, microvascular and thromboinflammatory injury, and autoantibody-mediated neuronal targeting-that interact as a self-perpetuating loop rather than a linear cascade, with...",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Detection of macula flava cells proliferation after vocal fold injury.",
+          "authors": "Li Xumao, Chen Xiangyu, Yu Sen, Lin Xinsheng, Sun Guangbin",
+          "journal": "Brazilian journal of otorhinolaryngology",
+          "date": "2026-10-02",
+          "pmid": "42826530",
+          "doi": "10.1016/j.bjorl.2026.101915",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42826530/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 5,
+          "summary": "OBJECTIVES: The role of macula flava cells in vocal fold injury repair remains unknown. This study aimed to determine whether they proliferate following vocal fold injury.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        }
+      ]
+    },
     {
       "week": "Week of September 28, 2026",
       "generated": "2026-10-02T12:13:12.668320+00:00",
