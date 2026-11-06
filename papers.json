@@ -1,6 +1,1093 @@
 {
-  "last_updated": "2026-10-30T12:36:55.926336+00:00",
+  "last_updated": "2026-11-06T18:54:13.812146+00:00",
   "weeks": [
+    {
+      "week": "Week of November 02, 2026",
+      "generated": "2026-11-06T18:54:13.812146+00:00",
+      "paper_count": 67,
+      "papers": [
+        {
+          "title": "From Plasma to Whole Blood: Validation of Glial Fibrillary Acidic Protein (GFAP) and Neurofilament Light Chain (NfL) As Accessible Biomarkers in Stroke.",
+          "authors": "Xue Yuting, Gu Yinwei, Wu Jiajing, Sun Yufeng, Wang Xilong, Jin Jing, Liu Xiangyi",
+          "journal": "The journal of applied laboratory medicine",
+          "date": "2026 Nov 04",
+          "pmid": "42460921",
+          "doi": "10.1093/jalm/jfag113",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42460921/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 34,
+          "summary": "BACKGROUND: Glial fibrillary acidic protein (GFAP) and neurofilament light chain (NfL) are critical blood-based biomarkers for the diagnosis and monitoring of a wide range of central nervous system (CNS) injuries. Current plasma-based assays require centrifugation, which prolongs turnaround time (TAT) and limits utility in emergency settings.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Stage-dependent associations of glial fibrillary acidic protein and chitinase-3-like protein 1 with white matter network integrity in Alzheimer's disease.",
+          "authors": "Li Oceanna Yueran, Turnbull Adam, Vankee-Lin Feng",
+          "journal": "Journal of Alzheimer's disease : JAD",
+          "date": "2026-09-08",
+          "pmid": "42709512",
+          "doi": "10.1177/13872877261485599",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42709512/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes",
+            "Biomarker"
+          ],
+          "relevance_score": 25,
+          "summary": "BackgroundAstrocytes become reactive in Alzheimer's disease (AD), and fluid markers of this response, including glial fibrillary acidic protein (GFAP) and chitinase-3-like protein 1 (YKL-40), increase across the AD continuum. However, it remains unclear whether astrocytic biomarker levels relate to preserved versus disrupted white matter (WM) integrity, and whether these relationships vary by amyloid-β (Aβ) burden and apolipoprotein E (APOE) ε4 status.ObjectiveTo examine associations of GFAP and YKL-40 with WM integrity, AD pathology, and memory across Aβ and APOE ε4 contexts.MethodsWe analyzed 52 dementia-free older adults from the...",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Evidence for similar enzymatic but different cellular generation of pE79-modified α-synuclein in PD and AD mouse models.",
+          "authors": "Bluhm Alexandra, Großmann Merle, Minister Charlotte, Schrempel Sarah, Joseph Maria Antonia, Holzer Max, Sauter Claude, Xiang Wei, Feja Malte, Schilling Stephan, Schulze Anja, Richter Franziska, Hartlage-Rübsamen Maike, Roßner Steffen",
+          "journal": "Neurochemistry international",
+          "date": "2026-09-11",
+          "pmid": "42727643",
+          "doi": "10.1016/j.neuint.2026.106260",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42727643/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP variants",
+            "GFAP aggregation",
+            "Astrocytes"
+          ],
+          "relevance_score": 23,
+          "summary": "The α-synuclein (aSyn) pathology is a predominant feature of synucleinopathies such as Parkinson's disease (PD). Triggers that may induce aSyn aggregation are not completely understood, but include post-translational modifications.",
+          "why_it_matters": "Relevant to GFAP variation, genetics, or potential disease-associated variants."
+        },
+        {
+          "title": "An Electrochemiluminescence Biosensing Platform Based on a Hydrogel-AAO Nanochannel Membrane for GFAP Detection.",
+          "authors": "Lai Junjie, Chen Jiaming, Huang Hongyang, Liu Jie, Zou Zhiyan, Liu Jilai, Lin Zhenyu, Hong Guolin",
+          "journal": "ACS sensors",
+          "date": "2026-11-05",
+          "pmid": "42986928",
+          "doi": "10.1021/acssensors.6c03340",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42986928/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 22,
+          "summary": "Electrochemiluminescence (ECL) biosensors are widely used for ultrasensitive bioanalysis; however, their practical application is often limited by insufficient interface stability under complex detection conditions. Herein, an integrated hydrogel-AAO membrane (HAM) as a novel composite ion-exchange membrane is developed for constructing stable ECL biosensing interfaces.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Comparability of GFAP and UCH-L1 Measurements Using Handheld and Core Laboratory TBI Plasma Tests and Their Diagnostic Performance for Traumatic Intracranial Lesions.",
+          "authors": "Roberts Nathan B, Gherasim Carmen, Li Kexin, Xie Tian, Falk Hayley, Bapuraj Jayapalli, Demski Debra, Fung Christopher M, Haas Nathan L, Kocher Keith E, Seagly Katharine S, Medlin Richard P, Joseph Jacob, Schipper Matthew J, Chandran Raj, Marino Jaime A, McQuiston Beth, Pradhan-Bhatt Swati, Korley Frederick K",
+          "journal": "The journal of applied laboratory medicine",
+          "date": "2026 Nov 04",
+          "pmid": "42720066",
+          "doi": "10.1093/jalm/jfag093",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42720066/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 22,
+          "summary": "BACKGROUND: Glial fibrillary acidic protein (GFAP) and ubiquitin carboxy-terminal hydrolase L1 (UCH-L1) are cleared by the U.S. Food and Drug Administration (FDA) to aid computed tomography (CT) decision-making in patients with traumatic brain injury (TBI).",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Plasma levels of glial fibrillary acidic protein and placental growth factor are associated with drug resistance in adult patients with newly diagnosed epilepsy.",
+          "authors": "Yang Bing-Jie, Song Yan-Ju, Xia Jian, Lei Tao",
+          "journal": "Epilepsy research",
+          "date": "2026-09-01",
+          "pmid": "42691867",
+          "doi": "10.1016/j.eplepsyres.2026.107907",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42691867/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 20,
+          "summary": "OBJECTIVE: The study aims to examine the plasma levels of glial fibrillary acidic protein (GFAP) and placental growth factor (PGF) in adult patients with epilepsy and investigate their association with drug resistance after exposure to antiseizure drugs (ASDs). METHODS: The study included 80 patients with newly diagnosed epilepsy and 80 non-epileptic controls.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Diagnostic Accuracy and Prognostic Value of the Dual GFAP/UCH-L1 Test in Patients Presenting to the Emergency Department with Mild Traumatic Brain Injury.",
+          "authors": "Menacho-Roman Miriam, Morales Rodríguez Audrey, Penedo Alonso José Roberto, Pecharromán de Las Heras Inés, Vicente Bartulos Agustina, Arribas-Gómez Ignacio",
+          "journal": "The journal of applied laboratory medicine",
+          "date": "2026 Nov 04",
+          "pmid": "42474046",
+          "doi": "10.1093/jalm/jfag110",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42474046/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 18,
+          "summary": "BACKGROUND: Excessive use of head computed tomography (CT) in mild traumatic brain injury (TBI) increases radiation exposure and contributes to emergency department crowding. Blood biomarkers glial fibrillary acid protein (GFAP) and ubiquitin carboxyl-terminal hydrolase L1 (UCH-L1) may improve risk stratification and guide clinical decision-making.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Ventricular and Choroid Plexus Morphological Alterations and Their Associations With Peripheral Biomarkers in Behavioral Variant Frontotemporal Dementia.",
+          "authors": "Yue Ailing, He Qianqian, Lu Hua, Chen Yufei, Hou Jiahui, Xu Yuxuan, Wu Liyong, Chu Min",
+          "journal": "Brain and behavior",
+          "date": "2026 Nov",
+          "pmid": "42989550",
+          "doi": "10.1002/brb3.71892",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42989550/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP variants",
+            "Biomarker"
+          ],
+          "relevance_score": 18,
+          "summary": "BACKGROUND: Frontotemporal dementia (FTD) is a neurodegenerative disorder and a major cause of early-onset dementia. Alterations in ventricular and choroid plexus volumes have been reported in several neurodegenerative diseases.",
+          "why_it_matters": "Relevant to GFAP variation, genetics, or potential disease-associated variants."
+        },
+        {
+          "title": "Neuropathological and functional impact of astrocyte-derived extracellular vesicles in an aged model of Alzheimer's disease.",
+          "authors": "Quach Bao, Salehi Sahar, Roufegarinejad Rejina, Guleria Vishal Singh, Mante Michael, Florio Jazmin, Rissman Robert A, Winston Charisse N",
+          "journal": "Experimental neurology",
+          "date": "2026-07-03",
+          "pmid": "42398567",
+          "doi": "10.1016/j.expneurol.2026.115893",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42398567/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP variants",
+            "Astrocytes",
+            "Biomarker"
+          ],
+          "relevance_score": 17,
+          "summary": "Extracellular vesicles (EVs) are lipid-bound particles that transfer cargos between cells. While plasma neuronal-derived EVs (NEVs) from individuals with mild cognitive impairment (MCI) and Alzheimer's disease (AD) have been reported to exhibit high pathogenic potential, this study examined the impact of astrocyte-derived EVs (AEVs) in an aged AD mouse model.",
+          "why_it_matters": "Relevant to GFAP variation, genetics, or potential disease-associated variants."
+        },
+        {
+          "title": "Serum Neurofilament Light Chain and GFAP in Amyotrophic Lateral Sclerosis on a Commercial ECLIA Platform.",
+          "authors": "Streicher Nicholas S",
+          "journal": "Muscle & nerve",
+          "date": "2026-09-04",
+          "pmid": "42698124",
+          "doi": "10.1002/mus.70397",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42698124/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 16,
+          "summary": "INTRODUCTION/AIMS: In amyotrophic lateral sclerosis (ALS), SIMOA-based studies show that baseline serum neurofilament light chain (NfL) predicts the revised ALS Functional Rating Scale (ALSFRS-R) decline rate and survival. The Roche Elecsys electrochemiluminescence immunoassay (ECLIA) reports values approximately six-fold lower; cross-platform comparison confirms comparable performance, but serial clinical-practice data remain limited.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Reactive astrocyte subpopulations with high Gfap and C4b expression in different Alzheimer's disease mouse models: Single-cell nuclear transcriptome analysis.",
+          "authors": "Huang Congying, Han Yuru, He Jinjing, Ma Wenhao, Chen Yujia, Dong Zhuo, Cheng Xiaoqin, Lu Changlian, Gu Xuefeng",
+          "journal": "Neural regeneration research",
+          "date": "2026-03-14",
+          "pmid": "41837502",
+          "doi": "10.4103/nrr.nrr-d-25-00789",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41837502/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 15,
+          "summary": "No abstract is currently available through PubMed.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Corrigendum to \"Prognostic effect of serum glial fibrillary acidic protein and neurofilament light chain for predicting progression independent of relapse activity in multiple sclerosis: A systematic review\" [Multiple Sclerosis and Related Disorders 114 (2026) 107439].",
+          "authors": "Maazi Anoosh, Moradi Yousef",
+          "journal": "Multiple sclerosis and related disorders",
+          "date": "2026-09-24",
+          "pmid": "42919519",
+          "doi": "10.1016/j.msard.2026.107931",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42919519/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 12,
+          "summary": "No abstract is currently available through PubMed.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Thymic teratoma in a chicken and a literature review of gonadal and extragonadal teratomas in veterinary species.",
+          "authors": "Harris Macallister C, Frank Chad B",
+          "journal": "Journal of veterinary diagnostic investigation : official publication of the American Association of Veterinary Laboratory Diagnosticians, Inc",
+          "date": "2026-08-29",
+          "pmid": "42668361",
+          "doi": "10.1177/10406387261477349",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42668361/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP aggregation"
+          ],
+          "relevance_score": 12,
+          "summary": "A 3-y-old rooster was submitted for postmortem evaluation following a 4-mo history of progressive ulcerative dermatitis affecting the right hock. Autopsy revealed 6 bilateral, discrete globoid masses along the caudoventral cervical musculature and extending into the proximal celomic cavity.",
+          "why_it_matters": "Relevant to GFAP aggregation, Rosenthal fibers, or intermediate filament biology."
+        },
+        {
+          "title": "Curcumin-activated olfactory ensheathing cells attenuate astroglial scar to facilitate nerve repair via the IL-10/NF-κB axis after spinal cord injury.",
+          "authors": "Zhang Dandan, Zhang Chengyun, Jia Binghan, Su Wenxin, Liu Zijian, Ma Xiaoyu, Li Junping, Yang Hao",
+          "journal": "International immunopharmacology",
+          "date": "2026-08-28",
+          "pmid": "42664893",
+          "doi": "10.1016/j.intimp.2026.117330",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42664893/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 11,
+          "summary": "Excessive astrocyte activation following spinal cord injury (SCI) can trigger the substantial deposition of inhibitory extracellular matrix components, particularly chondroitin sulfate proteoglycans (CSPGs) at the lesion core. This astroglial response typically leads to the formation of dense glial scars, which profoundly impede neuronal regeneration and axonal extension.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Pre- and post-stroke memantine administration attenuates neurological deficits, infarct size, and astrogliosis, with a concomitant increase in MAP2 protein in a rat stroke model.",
+          "authors": "Martínez-Torres Nestor I, Cárdenas-Bedoya Jhonathan, Torres-Mendoza Blanca Miriam",
+          "journal": "Experimental neurology",
+          "date": "2026-07-30",
+          "pmid": "42532140",
+          "doi": "10.1016/j.expneurol.2026.115949",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42532140/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 11,
+          "summary": "Over the past 30 years, the global incidence of stroke and related disability-adjusted life years has risen significantly, underscoring the urgent need for effective therapeutic strategies. Memantine (Mem), a non-competitive antagonist of N-methyl-d-aspartate (NMDA) glutamate receptors, has been investigated as a potential treatment in stroke models.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Docosahexaenoic acid attenuates anxiety-like behaviors and restores astrocytic function and serotonergic integrity following acute manganese exposure in mice.",
+          "authors": "El Fari Radouane, El-Mansoury Bilal, El Khiat Abdelaati, Gamrani Halima, Elgot Abdeljalil",
+          "journal": "Drug and chemical toxicology",
+          "date": "2026-05-12",
+          "pmid": "42117912",
+          "doi": "10.1080/01480545.2026.2666585",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42117912/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 11,
+          "summary": "Manganese (Mn) overexposure induces neurotoxicity characterized by motor and cognitive impairments, as well as anxiety-like behaviors. The current study aimed to investigate the neuroprotective effects of docosahexaenoic acid (DHA) against acute Mn-induced neurobehavioral and neuropathological alterations in adult Swiss mice.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Quantification of blood-based neurovascular unit biomarkers: an analytical platform comparison study.",
+          "authors": "Allen Chloe P, Goulet Dorothée J, Stukas Sophie, Agbay Andrew M, Morelli Tessa F, Romero Tali, Hirsch-Reinshagen Veronica, Wellington Cheryl L, Sekhon Mypinder S, Bird Jordan D",
+          "journal": "Resuscitation plus",
+          "date": "2026-09-11",
+          "pmid": "42825117",
+          "doi": "10.1016/j.resplu.2026.101487",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42825117/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "BACKGROUND: Hypoxic ischemic brain injury (HIBI) remains a significant cause of morbidity and mortality in patients following cardiac arrest. Many international guidelines for HIBI prognostication advocate for a multimodal approach with inclusion of blood-based biomarkers.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Subjective aging and neurobiomarkers of brain health in the health and retirement study.",
+          "authors": "Stephan Yannick, Sutin Angelina R, Luchetti Martina, Karakose Selin, Terracciano Antonio",
+          "journal": "Psychiatry research",
+          "date": "2026-08-03",
+          "pmid": "42594533",
+          "doi": "10.1016/j.psychres.2026.117358",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42594533/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "BACKGROUND: Subjective aging, operationalized by subjective age and self-perceptions of aging (SPA), has been consistently associated with cognition and incident dementia. The present study examined the association between subjective aging and blood neurobiomarkers of brain health.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Blood Biomarkers of Alzheimer's Disease and Patterns of Structural Brain Changes in the Community.",
+          "authors": "Valletta Martina, Vetrano Davide Liborio, Laukka Erika J, Kalpouzos Grégoria, Oltra Javier, Rizzuto Debora, Canevelli Marco, Fredolini Claudia, Qiu Chengxuan, Winblad Bengt, Fratiglioni Laura, Grande Giulia",
+          "journal": "Annals of neurology",
+          "date": "2026-07-27",
+          "pmid": "42515850",
+          "doi": "10.1002/ana.78309",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42515850/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "OBJECTIVE: We aimed to investigate the associations between Alzheimer's disease (AD)-related blood biomarkers and changes in brain volumes and cerebrovascular burden in community-dwelling older adults. METHODS: We included 361 dementia-free participants with a Mini-Mental State Examination (MMSE) score ≥ 27 and without prior cerebrovascular events from a Swedish population-based study.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Relative importance of blood-based biomarkers for Alzheimer's disease-specific neurodegeneration and cognitive decline.",
+          "authors": "Kim Keun You, Ham Hyunsun, Yoon Eun Jin, Kim Eosu, Kim Yu Kyeong, Lee Jun-Young, Alzheimer’s Disease Neuroimaging Initiative",
+          "journal": "The journal of prevention of Alzheimer's disease",
+          "date": "2026-07-11",
+          "pmid": "42435662",
+          "doi": "10.1016/j.tjpad.2026.100644",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42435662/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "BACKGROUND: Although blood-based biomarkers are now available for diagnosing Alzheimer's disease (AD), the best biomarker for AD-specific neurodegeneration and cognitive decline remains unclear. This study aimed to determine the relative importance of four plasma biomarkers-phosphorylated tau (p-tau) 217, p-tau181, neurofilament light chain (NfL), and glial fibrillary acidic protein (GFAP)-in AD-specific neurodegeneration and cognition.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Sex-associated neuroinflammatory and astrocytic responses in amyotrophic lateral sclerosis: evidence from clinical cohorts and a TDP-43 N390D mouse model.",
+          "authors": "Yu Wenfei, Zhao Bing, Ma Mingjie, Gao Ninglu, Yun Yan, Sun Xiaohan, Shao Kai, Lin Pengfei, Li Wei, Zhao Yuying, Yu Dexin, Zhao Cuiping, Liu Fuchen, Yan Chuanzhu, Liu Shuangwu",
+          "journal": "Brain, behavior, and immunity",
+          "date": "2026-07-09",
+          "pmid": "42425169",
+          "doi": "10.1016/j.bbi.2026.106884",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42425169/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes",
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "BACKGROUND: Sex differences are increasingly recognized as important modifiers of neuroimmune processes in neurodegenerative disorders. However, the sex-associated clinical phenotypes and underlying neuroinflammatory mechanisms in amyotrophic lateral sclerosis (ALS) remain poorly understood.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Reliable Change of Blood-Based Biomarkers Following Acute Sport-Related Concussion: A CARE Consortium Study.",
+          "authors": "Croghan Anna E, Churchill Rachel, Brett Benjamin L, Huber Daniel L, Harezlak Jaroslaw, Gill Jessica M, Pasquina Paul, Broglio Steven P, McAllister Thomas W, McCrea Michael A, Meier Timothy B, CARE Consortium Investigators",
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "date": "2026-06-30",
+          "pmid": "42377763",
+          "doi": "10.1007/s40279-026-02479-4",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42377763/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "BACKGROUND: Growing evidence supports the potential of blood-based biomarkers for aiding in concussion diagnosis, though most work has focused on biomarker changes at the group level. Here, reliable change indices (RCI) identify individual athletes exhibiting meaningful elevations or decreases in biomarkers from baseline to multiple acute post-concussion timepoints.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Analgesic Modulation of Neuroendocrine and Region-Specific Neuropathological Responses Following Blast-Induced Traumatic Brain Injury in Rats.",
+          "authors": "Samdavid Thanapaul Rex Jeya Rajkumar, Govindarajulu Manoj Y, Patel Mital Y, Krishnan Jishnu K S, Menon Deepak, Pundkar Chetan, Phuyal Gaurav, Anderson Laura M, Samineni Sridhar, Long Joseph B, Arun Peethambaran",
+          "journal": "Journal of neurotrauma",
+          "date": "2026-04-17",
+          "pmid": "41992868",
+          "doi": "10.1177/08977151261442479",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41992868/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "Blast-induced traumatic brain injury is a significant health concern among military personnel and civilians exposed to explosive devices. Although analgesics are routinely used in laboratory animal studies, their effects on neuroendocrine and neuropathological responses to blast remain insufficiently understood.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Retinal Microvascular Alterations Link Astroglial Activation to Neurodegeneration in Mild Cognitive Impairment.",
+          "authors": "Hu Suqing, Wang Youjie, Wang Lili, Wu Surui, Zheng Chunwen, Xu Hong, Kwapong William Robert, Wang Zhen",
+          "journal": "Translational vision science & technology",
+          "date": "2026 Nov 02",
+          "pmid": "42975098",
+          "doi": "10.1167/tvst.15.11.5",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42975098/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "PURPOSE: To investigate the associations between retinal microvascular complexity and neurodegeneration, cerebral small vessel disease (SVD), plasma biomarkers, and cognition in mild cognitive impairment (MCI). METHODS: This cross-sectional study included 77 individuals with MCI and 93 cognitively unimpaired (CU) older adults.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Plasma biomarkers in chronic mild traumatic brain injury: A review.",
+          "authors": "Dark Heather E, Lippa Sara M, Gill Jessica M",
+          "journal": "The Clinical neuropsychologist",
+          "date": "2025-12-31",
+          "pmid": "41475380",
+          "doi": "10.1080/13854046.2025.2604091",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41475380/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 10,
+          "summary": "Background/Objective: Understanding the biological cascade which results from a mild traumatic brain injury (mTBI) is essential to determine outcomes over time. Acute plasma levels of brain-related injury markers (BRIMS; ubiquitin carboxy-terminal hydrolase L1 [UCH-L1], total tau[t-tau], neurofilament light chain [NfL], S100 calcium-binding protein β [S100β], glial fibrillary acidic protein [GFAP]) are typically elevated in patients post-mTBI, and relate to injury severity, distinguish neuroimaging findings, and to some degree, relate to functional outcomes.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Kcnv2 E151X Mouse Captures Hallmarks of KCNV2-Associated Retinal Dystrophy.",
+          "authors": "Xhaferri Nermina, Biswas Sumit, Davies Benjamin, Lindner Moritz",
+          "journal": "Clinical & experimental ophthalmology",
+          "date": "2026-09-01",
+          "pmid": "42680688",
+          "doi": "10.1111/ceo.70163",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42680688/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP variants"
+          ],
+          "relevance_score": 9,
+          "summary": "BACKGROUND: KCNV2-associated retinopathy is a rare inherited retinal dystrophy caused by variants in the KCNV2 gene, leading to disrupted photoreceptor behaviour and progressive deterioration of vision. Patients have characteristic electroretinography abnormalities, including reduced cone response, delayed and reduced rod response to low light flashes and paradoxically large rod-driven response to bright flashes of light.",
+          "why_it_matters": "Relevant to GFAP variation, genetics, or potential disease-associated variants."
+        },
+        {
+          "title": "Immunohistochemical study on spinal cord ependymal cells and ependymomas in dogs.",
+          "authors": "Tokuno Hisaki, Chambers James K, Oji Takashi, Takahashi Fumitaka, Yamaguchi Shinya, Sakai Kiyotake, Uchida Kazuyuki",
+          "journal": "The Journal of veterinary medical science",
+          "date": "2026-11-05",
+          "pmid": "42983862",
+          "doi": "10.1292/jvms.26-0470",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42983862/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 8,
+          "summary": "Spinal cord ependymoma is a glial tumor that originates from progenitor cells lining the central canal in humans. The histopathological features and origin of canine spinal cord ependymomas remain unclear because of the limited number of cases.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "The Mechanical Properties of Spinal Cord Organoids Depend on Their Age and Composition.",
+          "authors": "Samei Yasaman, Cheung Ingrid, Quezada Maria Jose, Franz Colin K, Finan John D",
+          "journal": "Annals of biomedical engineering",
+          "date": "2026-10-30",
+          "pmid": "42961541",
+          "doi": "10.1007/s10439-026-04434-w",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42961541/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 8,
+          "summary": "PURPOSE: Spinal cord organoids are valuable human in vitro models of development and disease. Many aspects of cell behavior and function in the spinal cord are regulated by mechanical signals, but the mechanical properties of human spinal cord organoids remain largely uncharacterized.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "EGR1 mediates neuronal damage via suppressing HIF1A-induced mitophagy following traumatic brain injury.",
+          "authors": "Hou Xiaoxiang, Zhang Danfeng, Sang Xianzheng, Peng Chaogui, Chen Wen, Xu Jing, Ye Yichao, Guo Yangu, Shi Hantong, Yang Chengzi, Cai Hanzi, Wang Yijian, Chu Guangxin, Xu Haoxiang, Lv Liquan, Jin Hai, Wang Chunhui, Qu Xiaolin",
+          "journal": "Autophagy",
+          "date": "2026-06-28",
+          "pmid": "42323821",
+          "doi": "10.1080/15548627.2026.2693261",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42323821/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 8,
+          "summary": "Traumatic brain injury (TBI) remains a leading cause of neurological morbidity and mortality, characterized by complex pathophysiological cascades. Here, we investigate the role of the transcription factor EGR1 (early growth response 1) in modulating mitochondrial homeostasis via the HIF1A (hypoxia inducible factor 1, alpha subunit)-BNIP3 (BCL2/adenovirus E1B interacting protein 3) axis following TBI.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "[Meat Inspection - What's Your Diagnosis?].",
+          "authors": "Stephan R, Gmür P, Barmettler K, Hilbe M",
+          "journal": "Schweizer Archiv fur Tierheilkunde",
+          "date": "2026 Nov",
+          "pmid": "42985942",
+          "doi": "10.17236/sat00489",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42985942/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 8,
+          "summary": "During a meat inspection of a 12-year-old female cow, cordlike and multinodular masses were detected in the right atrium and the right ventricle. The cut surfaces of the nodules were gelatinous and yellowish.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Repetitive blast TBI drives chronic sex-dependent paroxysmal motor behaviors and sleep disruption.",
+          "authors": "Prajapati Sushant, Wilbur Gavyn, Hunley Caleb, Drinkard Esther, Eapen Nathan, Mentzel Henry, Nah Gabriel D, Armstrong Michael S, Murphy Sean M, Rowe Rachel, Hubbard W Brad",
+          "journal": "Experimental neurology",
+          "date": "2026-11-05",
+          "pmid": "42988305",
+          "doi": "10.1016/j.expneurol.2026.116123",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42988305/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "BACKGROUND: Repeated blast-induced traumatic brain injury (rbTBI) is a major cause of chronic neurological morbidity in military populations, with post-traumatic epilepsy (PTE) representing a significant long-term complication. While blast exposure is implicated in epileptogenesis and development of PTE, the direct effects of rbTBI on chronic seizure burden remains poorly understood.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Neuroprotective effects of ıdebenone and citicoline in experimental traumatic optic neuropathy: electrophysiological, histological, and biochemical assessments in a rat model.",
+          "authors": "Mendı Zarife Nurbanu, Nalcacıoglu Memis Pinar, Hamurcu Mualla, Oksuz Pinar, Neselıoglu Salim",
+          "journal": "Documenta ophthalmologica. Advances in ophthalmology",
+          "date": "2026-11-03",
+          "pmid": "42975810",
+          "doi": "10.1007/s10633-026-10156-0",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42975810/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 7,
+          "summary": "OBJECTıVE: This study aims to investigate the neuroprotective efficacy of idebenone and citicoline in a rat model of traumatic optic neuropathy (TON), induced by controlled optic nerve (ON) crush injury. MATERıALS AND METHODS: Forty male Wistar rats (250-300 g) were randomly assigned to four groups (n=10).",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Subregional reduction in CB1 receptor in dopamine neurons in postmortem schizophrenia midbrain.",
+          "authors": "El Haj Christelle, Prasad Asheeta A",
+          "journal": "Schizophrenia research",
+          "date": "2026-08-21",
+          "pmid": "42628242",
+          "doi": "10.1016/j.schres.2026.08.004",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42628242/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "Schizophrenia is a chronic psychiatric disorder affecting 1% of the population. Common treatment strategies include antipsychotics that block or modulate dopamine receptors.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Intranasal insulin reduces ADHD-like behaviors and neurodevelopmental deficits following neonatal hypoxia-ischemia in juvenile rats.",
+          "authors": "Dankhara Nilesh, Lee Jonathan W, Ojeda Norma B, Tucci Michelle A, Lu Silu, Childers Katelyn E, Klim Madison, Lockett Tyra Z, Valentine Almia S, Glendye Carolyn K, Tien Lu-Tai, Salazar Marocho Susana M, da Silva Alexandre A, Pang Yi, Bhatt Abhay J, Fan Lir-Wan",
+          "journal": "Neurochemistry international",
+          "date": "2026-08-14",
+          "pmid": "42600992",
+          "doi": "10.1016/j.neuint.2026.106248",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42600992/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "Neonatal hypoxia-ischemia (HI) is a leading cause of long-term neurodevelopmental impairment and is increasingly associated with a heightened risk of attention-deficit/hyperactivity disorder (ADHD) and related behavioral abnormalities. Beyond its metabolic role, insulin functions as a neurotrophic and immunomodulatory factor in the developing brain.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Astrocyte activation contributes to exertional heatstroke-induced learning and memory impairment in mice.",
+          "authors": "Zhang Bin, Feng Aina, Liu Shanshou, Dai Zheng, Wang Qianmei, Huang Yang, Li Junjie, Yin Wen",
+          "journal": "Pathology, research and practice",
+          "date": "2026-08-11",
+          "pmid": "42586026",
+          "doi": "10.1016/j.prp.2026.156630",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42586026/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "Exertional heatstroke (EHS) is a life-threatening medical condition with a high mortality rate, characterized by dysfunction of the central nervous system, including memory impairment. Astrocytes have been reported to be closely related to learning and memory process.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Astrocyte-Specific Upregulation of Tumor Necrosis Factor Receptor II Ameliorates Pathological Phenotypes in APPNL-F/NL-F Mice.",
+          "authors": "Li Dafeng, Li Yang, Wen Lang, Chen Zuolong, Gao Feng, Shen Yong, Wang Qiong",
+          "journal": "Neuroscience bulletin",
+          "date": "2026-03-11",
+          "pmid": "41811667",
+          "doi": "10.1007/s12264-026-01593-7",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41811667/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 7,
+          "summary": "Our earlier research showed that deletion of tumor necrosis factor-α receptor II (TNFRII) exacerbated Alzheimer's disease (AD) associated pathology in the AD mouse model. Previous studies have demonstrated that TNFRII was mainly expressed in astrocytes.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Blood-Based Biomarkers and Traumatic Intracranial Hypertension: A Transforming Research and Clinical Knowledge in Traumatic Brain Injury Study.",
+          "authors": "Bonow Robert H, Temkin Nancy, Barber Jason, Foreman Brandon, Baird-Daniel Eliza, Kelly-Hedrick Margot, Buckley Robert T, Mac Donald Christine L, Chesnut Randall M, Korley Frederick K, Diaz-Arrastia Ramon R, Puccio Ava, Okonkwo David O, Robertson Claudia S, Manley Geoffrey T, TRACK-TBI Investigators",
+          "journal": "Neurosurgery",
+          "date": "2026-11-05",
+          "pmid": "42987173",
+          "doi": "10.1227/neu.0000000000004266",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42987173/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "BACKGROUND AND OBJECTIVES: The role of blood-based biomarkers in guiding the acute management of patients with established traumatic brain injury is unclear. We sought to determine whether concentrations of glial fibrillary acid protein (GFAP) or ubiquitin C-terminal hydrolase L1 (UCH-L1) on hospital day 1 are associated with intracranial pressure (ICP) and therapeutic intensity level (TIL).",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Progress towards improving mouse models for preclinical testing of treatments for Alzheimer's disease.",
+          "authors": "Sasner Michael, Rangel-Barajas Claudia, Oblak Adrian L",
+          "journal": "Mammalian genome : official journal of the International Mammalian Genome Society",
+          "date": "2026-11-03",
+          "pmid": "42980691",
+          "doi": "10.1007/s00335-026-10290-9",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42980691/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "Alzheimer's disease (AD) research has accomplished significant strides in recent years, particularly with the first regulatory approvals of disease-modifying therapies and a comprehensive revision of disease diagnostic criteria. Both developments place new demands on preclinical mouse models used to test potential treatments.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Vasomechanic treatment is associated with increased efflux of human brain proteins.",
+          "authors": "Tuunanen Johanna, Hautamäki Katariina, Väyrynen Tommi, Järvelä Matti, Korhonen Vesa, Huotari Niko, Kaakinen Mika, Kananen Janne, Helakari Heta, Raitamaa Lauri, Jukkola Jari, Herukka Sanna-Kaisa, Laurén Katariina, Salmi Ulla, Eklund Lauri, Nikkinen Juha, Nedergaard Maiken, Kiviniemi Vesa",
+          "journal": "Nature communications",
+          "date": "2026-11-03",
+          "pmid": "42977753",
+          "doi": "10.1038/s41467-026-78894-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42977753/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "An age-related neurovascular impairment in nitric oxide (NO)-mediated vasodilation and reciprocal Piezo1-dependent vascular vasoconstriction may precede the accumulation of soluble brain proteins such as amyloid-β (Aβ) and disruption of brain fluid homeostasis in Alzheimer's disease (AD). Preclinical studies suggest that restoring these pathways can enhance neurofluid transport and improve cognitive outcomes.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Timing-associated Differences in Cytokine and Neuromarker Responses to BM-MSC Therapy after Spinal Cord Injury: A Case Report of Two Patients.",
+          "authors": "Slovinska Lucia, Matejova Jana, Spakova Timea, Vaczy Zuzana, Cibur Peter, Fecskeova Livia Kolesar, Košuthová Hedviga, Harvanová Denisa",
+          "journal": "CNS & neurological disorders drug targets",
+          "date": "2026-10-29",
+          "pmid": "42983618",
+          "doi": "10.2174/0118715273527917261027110838",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42983618/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "INTRODUCTION: Mesenchymal Stem Cell (MSC) therapy is a promising strategy for modulating post-traumatic inflammation after Spinal Cord Injury (SCI), yet clinical responses vary widely. This case report introduces a unique, longitudinal biomarker-driven approach to track systemic molecular shifts after cell therapy.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Capillary blood sampling in neurodegenerative diseases - the future for screening and monitoring brain health?",
+          "authors": "Hicks Sophie, Fernandes Gomes Barbara, Heslegrave Amanda",
+          "journal": "Expert review of neurotherapeutics",
+          "date": "2026-09-15",
+          "pmid": "42745552",
+          "doi": "10.1080/14737175.2026.2734450",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42745552/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "INTRODUCTION: Blood-based biomarkers are becoming increasingly utilized in the neurodegenerative research field for indicating patient disease status. With increasing emphasis on large-scale prevention trials, developing cost-effective and accessible means of sampling for these biomarkers is imperative.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Perioperative Brain Damage Biomarkers Predict Neurodevelopmental Delay After Infant Cardiac Surgery: A Multicenter Study.",
+          "authors": "Camprubi-Camprubi Marta, Lorenzi-Quigley Lauren, Cañizo-Vazquez Debora, Baust Tracy, Remon Ana, Rivas Alba, Perez Marta, Domnina Yuliya, Gazit Avihu Z, Ivy Lin Jiuann-Huey, Sanchez-de-Toledo Joan",
+          "journal": "Pediatric neurology",
+          "date": "2026-08-11",
+          "pmid": "42704948",
+          "doi": "10.1016/j.pediatrneurol.2026.07.035",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42704948/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "BACKGROUND: Infants with congenital heart disease are at high risk for neurodevelopmental impairment following cardiac surgery. Brain damage biomarkers may provide insight into perioperative brain injury and neurodevelopmental outcomes.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Biomarkers of chemical- and drug-induced neurotoxicity: A review of mechanistic insights and neuroprotective strategies.",
+          "authors": "Alshammari Abdulaziz Arif A, Mani Vasudevan",
+          "journal": "Food and chemical toxicology : an international journal published for the British Industrial Biological Research Association",
+          "date": "2026-08-11",
+          "pmid": "42580617",
+          "doi": "10.1016/j.fct.2026.116335",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42580617/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "Chemical- and drug-induced neurotoxicity remains a concern in environmental health and clinical pharmacology due to the nervous system's vulnerability and limited regeneration. This review explores biomarkers for detecting, monitoring, and mitigating neurotoxicity, and discusses underlying mechanisms.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Concussion AF trial: Longitudinal assessment of brain injury biomarkers and cognitive decline in elderly patients with atrial fibrillation.",
+          "authors": "Bunch T Jared, May Heidi T, Muhlestein Joseph B, Anderson Jeffrey L, Le Viet, Woller Scott C, Cutler Michael J, Mahajan Rajiv, Targueta Gabriel P, Gurol M Edip, Knowlton Kirk",
+          "journal": "Heart rhythm",
+          "date": "2026-07-23",
+          "pmid": "42492825",
+          "doi": "10.1016/j.hrthm.2026.07.019",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42492825/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "BACKGROUND: Atrial fibrillation (AF) is associated with cognitive impairment. Serum biomarkers to detect subclinical brain injury or predict dementia in patients with anticoagulated AF are understudied.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Full functional knockout of placental growth factor primes the mouse neurovasculature for inflammation and injury.",
+          "authors": "Rivera Daniel A, Krick Katelynn E, Rogers Colin B, Seaks Charles E, Sudduth Tiffany L, Bottiglieri Teodoro, Weekman Erica M, Wilcock Donna M",
+          "journal": "Journal of cerebral blood flow and metabolism : official journal of the International Society of Cerebral Blood Flow and Metabolism",
+          "date": "2026-07-19",
+          "pmid": "42473161",
+          "doi": "10.1177/0271678x261473355",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42473161/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes",
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "The MarkVCID consortium investigating biomarkers for vascular contributions to cognitive impairment and dementia (VCID) found placental growth factor (PlGF) correlated with white matter hyperintensities and cognitive impairment. PlGF, thought to be redundant in function compared to VEGF-A, is associated with increased blood-brain barrier permeability, although the exact mechanism remains unknown.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Locus coeruleus microstructural integrity and sleep disruption in the context of Alzheimer's disease pathology.",
+          "authors": "Van Egroo Maxime, Patsyuk Yuliya, Baillet Marion, Vogt Nicholas M, Lim Andrew S P, Ashton Nicholas J, Janelidze Shorena, Blennow Kaj, Hansson Oskar, Zetterberg Henrik, Jacobs Heidi I L",
+          "journal": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
+          "date": "2026 Nov",
+          "pmid": "42982755",
+          "doi": "10.1002/alz.71964",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42982755/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 6,
+          "summary": "INTRODUCTION: The locus coeruleus (LC) is among the first sites of tau pathology in Alzheimer's disease (AD) and plays a key role in sleep-wake regulation. However, evidence linking LC integrity to objective sleep measures in the context of emerging AD pathology remains limited.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        },
+        {
+          "title": "Chaihu-Shugan-San exerts rapid antidepressant effects via sex-specific suppression of hippocampal neuroinflammation: dissociation from peripheral anti-inflammatory and hormonal actions.",
+          "authors": "Liu Hongbo, Huang Zihao",
+          "journal": "Behavioural pharmacology",
+          "date": "2026-11-05",
+          "pmid": "42989916",
+          "doi": "10.1097/fbp.0000000000000904",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42989916/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 4,
+          "summary": "Major depressive disorder is a major contributor to disability and a key component of the overall global burden of disease. Women consistently demonstrate a higher prevalence of depression in comparison to men; however, the underlying mechanisms driving this gender-based disparity remain unclear.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Rotigotine Attenuates Mechanical Hypersensitivity in 6-OHDA-Lesioned Rats: Associations with D2/D3 Receptors and Spinal Glial NF-κB/p65 Signaling.",
+          "authors": "Santamaria-Anzures Jazmin, Martínez-Lorenzana Guadalupe, González-Morales Estefanía, Palmeros-Barreda Dafne, De-la-Cruz-Martínez Ledy, Cortés-Benítez Francisco, Pérez-Ramos Julia, Condés-Lara Miguel, Godínez-Chaparro Beatriz",
+          "journal": "Neurochemical research",
+          "date": "2026-11-04",
+          "pmid": "42980954",
+          "doi": "10.1007/s11064-026-04948-8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42980954/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 4,
+          "summary": "Pain is a debilitating non-motor symptom of Parkinson's disease (PD). This study investigated whether rotigotine attenuated pain hypersensitivity (allodynia and hyperalgesia) in hemiparkinsonian rats and explored D1/D2/D3 receptor involvement, NF-κB/p-p65 signaling modulation in glial cells, and spinal TNF-α and IL-1β expression.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "From multi-omics screening to functional validation: The SOD1-SIRT5 Axis as a potential mediator of ammonia-related neuronal injury and NAD⁺-based neuroprotection in epilepsy.",
+          "authors": "Han Jing, Huang Ya, Li Sijun, Xuan Caixia, Qin Peiying, Liu Tingzhi, Jiang Chunxiang, Liang Xinhong, Tan Tingting, Wei Xing, Liu Chaoning",
+          "journal": "Metabolic brain disease",
+          "date": "2026-11-04",
+          "pmid": "42980871",
+          "doi": "10.1007/s11011-026-02016-2",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42980871/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "While the excitation-inhibition imbalance theory has long dominated epilepsy research, the role of cerebral ammonia dysregulation remains underexplored. Herein, we integrated bioinformatics with multi-level experimental validation utilizing tissues from epilepsy patients, a kainic acid-induced chronic mouse model, and an in vitro magnesium-free neuronal model.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Frequency and Phenotype of Coexisting Aquaporin-4 and Autoimmune Encephalitis Autoantibodies.",
+          "authors": "Cacciaguerra Laura, Yang Binxia, Lennon Vanda A, Agnihotri Shruti P, Ahsan Nusrat, Fernandez Karen S, McLeod Erin, Mangioris Georgios, Meador William R, Mitchell Wendy G, Nicholas Jacqueline A, Quek Amy M L, Shoemaker Thomas, Sieloff Kurt, Edmond Matt C, Laggis Rebekah A, Flynn Kristin L, Sagen Jessica A, Waubant Emmanuelle, Chen John J, Irani Sarosh R, McKeon Andrew, Zekeridou Anastasia, Flanagan Eoin P, Pittock Sean J, Kunchok Amy",
+          "journal": "Annals of clinical and translational neurology",
+          "date": "2026-11-04",
+          "pmid": "42979782",
+          "doi": "10.1002/acn3.70541",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42979782/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Among 9457 aquaporin-4 (AQP4) immunoglobulin G-positive patients, 2071 underwent autoimmune encephalitis antibody testing and 85 (4%) had coexisting antibodies, most commonly cerebrospinal fluid glial fibrillary acidic protein-IgG and N-methyl-D-aspartate receptor-IgG, or serum high-titer GAD65-IgG. Compared with AQP4-IgG positive neuromyelitis optica spectrum disorder controls, dual-positive patients were younger and more frequently exhibited encephalopathy, psychiatric symptoms, seizures, ovarian teratomas, and deep gray matter, temporal lobe, or diencephalic MRI abnormalities.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "An Integrated Whole-Body Normal-Tissue Proteomics Framework Maps Tissue Variation in Senescence-Associated and Ferroptosis-Related Protein Programs.",
+          "authors": "Meng Xianbin, Luan Qiyue",
+          "journal": "Proteomics",
+          "date": "2026-11-01",
+          "pmid": "42968465",
+          "doi": "10.1002/pmic.70202",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42968465/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Normal-tissue proteomics can contextualize senescence-associated and ferroptosis-related protein programs. We analyzed 580 normal human tissue specimens (466 adult and 114 fetal) representing 9 adult and 8 fetal Patient IDs.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Neuron-specific Drp1 deletion exacerbates hippocampal synaptic dysfunction and spatial memory impairment during high-fat diet-induced metabolic stress.",
+          "authors": "Jeong Eun Ae, Shin Hyun Joo, Kim Eun-Jin, Kim Yoonsub, An Hyeong Seok, Kim Kyung Eun, Park Gyeongah, Kang Dawon, Roh Gu Seob",
+          "journal": "Experimental neurology",
+          "date": "2026-10-31",
+          "pmid": "42966615",
+          "doi": "10.1016/j.expneurol.2026.116104",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42966615/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "High-fat diet (HFD)-induced metabolic dysfunction is associated with hippocampal injury and cognitive impairment, but the neuronal factors that determine susceptibility to these abnormalities remain unclear. Dynamin-related protein 1 (Drp1) is a key regulator of mitochondrial fission that supports neuronal and synaptic function.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Therapeutic Potential of Formononetin in Drug-Resistant Epilepsy: Evidence from a Rotenone-PTZ-Lamotrigine Mouse Model.",
+          "authors": "Khedpande Nidhi, Barve Kalyani",
+          "journal": "Neurochemical research",
+          "date": "2026-10-31",
+          "pmid": "42965730",
+          "doi": "10.1007/s11064-026-04945-x",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42965730/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Drug-resistant epilepsy (DRE) affects nearly one-third of individuals with epilepsy and remains a major therapeutic challenge despite the availability of multiple antiseizure medications. Mitochondrial dysfunction and chronic neuroinflammation, particularly NLRP3 inflammasome activation, are increasingly recognized as key contributors to pharmacoresistance.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Experimental evidence for electroacupuncture in managing pain from chemotherapy-induced peripheral neuropathy: a systematic review and meta-analysis.",
+          "authors": "Kong Ying, You Lei, Hu Mengwan, Tian Qiyuan, Sun Hong, Liu Kai, Li Pengfei, Song Ping, Li Jingang",
+          "journal": "Brazilian journal of medical and biological research = Revista brasileira de pesquisas medicas e biologicas",
+          "date": "2026-10-30",
+          "pmid": "42987025",
+          "doi": "10.1590/1414-431x2026e15562",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42987025/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "This study systematically evaluated the evidence from animal experiments on electroacupuncture (EA) for chemotherapy-induced peripheral neuropathy (CIPN) pain models. A systematic review and meta-analysis was conducted using the PICOS framework to assess the behavioral and molecular effects of EA and clarify its underlying mechanisms and translational potential.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Acute sleep deprivation induces ECM-associated transcription and MMP12-sensitive perivascular remodeling.",
+          "authors": "Gong Song, Li Shi, Su Lihan, Yao Ensheng, Li Zhanfei, Liu Xinghua, Li Ke",
+          "journal": "Experimental neurology",
+          "date": "2026-10-30",
+          "pmid": "42962797",
+          "doi": "10.1016/j.expneurol.2026.116102",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42962797/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "BACKGROUND: Sleep deprivation (SD) disrupts brain homeostasis, but whether acute sleep loss alters extracellular matrix (ECM) programs and the structural organization of the perivascular interface remains unclear. METHODS: We integrated re-analysis of three public 6-h SD transcriptomic datasets with cisterna magna tracer studies, collagen IV and hyaluronan-binding protein 2 (HABP2) imaging, cellular localization of matrix metalloproteinase-12 (MMP12), transmission electron microscopy, pharmacological MMP12 inhibition, and continuous EEG/EMG recording during ZT0-ZT6 and recovery, with manual sleep-wake scoring in 4-s epochs.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Selenium speciation drives differential neuroprotection by Se-enriched plant proteins against neuroinflammation.",
+          "authors": "Zhang Yue, Wu Changqing, Li Yue, Zhu Song, Cong Xin, Huang Dejian, Yu Ruipeng, Chen Shangwei",
+          "journal": "Food & function",
+          "date": "2026-10-30",
+          "pmid": "42961117",
+          "doi": "10.1039/d6fo04574j",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42961117/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Selenium (Se)-containing compounds have emerged as promising neuroprotective nutrients. However, the effects of Se-enriched proteins with different Se species on neuroinflammation remain poorly understood.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Vascular endothelial growth factor A induces proliferation of adult neural progenitor cells in non-neurogenic periventricular regions of the adult mouse hindbrain.",
+          "authors": "Fauser Mareike, Bockholt Roy, Keiner Silke, Weselek Grit, Hermann Andreas, Redecker Christoph, Storch Alexander",
+          "journal": "Neuroreport",
+          "date": "2026-10-28",
+          "pmid": "42911046",
+          "doi": "10.1097/wnr.0000000000002312",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42911046/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "BACKGROUND: In addition to the well-established neurogenic niche of the ventricular-subventricular zone (V-SVZ) of the lateral ventricles, neural stem/progenitor cells (NPCs) have been identified in the periventricular regions (PVRs) throughout the adult mouse ventricular system. The potential role of these NPCs in neuroplasticity or neurorestoration, however, remains largely unexplored.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Surface modification as a strategy to mitigate TiO₂ NPs-induced neurotoxicity in rats.",
+          "authors": "Elhussein Israa, Hassanen Eman I, Farroh Khaled Y, Azouz Rehab A, Bawish Basma M, Ibrahim Marwa A, Hassan Azza",
+          "journal": "Toxicology and applied pharmacology",
+          "date": "2026-08-31",
+          "pmid": "42674167",
+          "doi": "10.1016/j.taap.2026.118024",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42674167/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Titanium dioxide nanoparticles (TiO₂ NPs) are extensively utilized in biomedical and pharmacological sectors; however, they may interact with biological systems causing various risks. Therefore, the present study assessed the role of surface modification by either chitosan (CS) or silica (Si) in mitigating TiO₂ NPs-induced neurotoxicity in rats.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Up-regulation of the kinase LRRK2, in enteric glia contributes to mucosal barrier impairment in Parkinson's disease via secretory autophagy.",
+          "authors": "D'Antongiovanni Vanessa, Pierucci Clarissa, Segnani Cristina, Ippolito Chiara, Di Salvo Clelia, Lucarini Elena, Antonioli Luca, Fornai Matteo, Bernardini Nunzia, Derkinderen Pascal, Scarpignato Carmelo, Pellegrini Carolina",
+          "journal": "British journal of pharmacology",
+          "date": "2026-08-13",
+          "pmid": "42593416",
+          "doi": "10.1111/bph.70623",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42593416/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "BACKGROUND AND PURPOSE: Patients with Parkinson's disease (PD) show intestinal epithelial barrier (IEB) alterations, enteric gliosis and inflammation that could contribute to gastrointestinal symptoms. Moreover, changes in leucine rich-repeat kinase 2 (LRRK2) expression/activity have been associated with PD development and related intestinal inflammation.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Imaging of Spinal Cord Inflammatory Disorders.",
+          "authors": "Margoni Monica, Rocca Maria A, Filippi Massimo",
+          "journal": "Neuroimaging clinics of North America",
+          "date": "2026-07-20",
+          "pmid": "42863949",
+          "doi": "10.1016/j.nic.2026.06.005",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42863949/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Inflammatory myelopathies comprise a group of spinal cord disorders with overlapping clinical manifestations but distinct etiologies, prognoses, and treatment implications. This article highlights the role of magnetic resonance imaging (MRI) in differentiating immune-mediated causes of myelitis, including multiple sclerosis, aquaporin-4-positive neuromyelitis optica spectrum disorder, myelin oligodendrocyte glycoprotein antibody-associated disease, glial fibrillary acidic protein astrocytopathy, immune checkpoint inhibitor-related neuroinflammatory conditions, paraneoplastic syndromes, and systemic autoimmune diseases.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "The intravenous targeted nanopeptide, CAQK, is neuroprotective and improves motor function after spinal cord injury in rats.",
+          "authors": "Castillo Jose A, Uppuluri Jay, Le Michael, Tran Taylor, Pivetti Christopher, Huang Kuan-Wei, Vatoofy Sina, Ratcliff Amanda, Dangan Andrei, Bannerman Solomon, Lee Maya, Shahin Mehrad, Loll Emma, Clark Kaitlin, Wang Aijun, Russo Rachel",
+          "journal": "The journal of trauma and acute care surgery",
+          "date": "2026-06-30",
+          "pmid": "42378652",
+          "doi": "10.1097/ta.0000000000005054",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42378652/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "BACKGROUND: CAQK is a homing peptide that targets sites of central nervous system injury and has previously demonstrated functional benefits in traumatic brain injury models. We recently demonstrated its localization to spinal cord injury (SCI) after intravenous administration and hypothesized that it could enhance motor recovery after SCI.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Intracerebral papillary ependymoma in a cow.",
+          "authors": "Bagatella Stefano, Kauer Ronja, Polidori Margherita, Oevermann Anna",
+          "journal": "Journal of veterinary diagnostic investigation : official publication of the American Association of Veterinary Laboratory Diagnosticians, Inc",
+          "date": "2026-05-14",
+          "pmid": "42136122",
+          "doi": "10.1177/10406387261444330",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42136122/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Intracranial neoplasms are rare in cattle. Bovine ependymomas have been reported only sporadically, with limited morphologic descriptions and, to our knowledge, without immunohistochemical characterization.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Matrix Matters: Head-To-Head Concordance of Serum and Plasma for NULISAseq CNS Disease Panel.",
+          "authors": "Merati Tommaso, Tolassi Chiara, Rondina Alessandro, Girotto Irene, Bertoni Marianna, Sweeney Eileen Mac, Toja Andrea, Rusi Eqrem, Martinuzzo Caterina, Pilotto Andrea, Padovani Alessandro",
+          "journal": "Journal of neurochemistry",
+          "date": "2026 Nov",
+          "pmid": "42985912",
+          "doi": "10.1111/jnc.70574",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42985912/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Blood-based proteomic profiling is now widely applied in neurodegenerative and neuroinflammatory disease, yet the choice between serum and plasma remains poorly characterised for high-multiplex platforms. Many biobanks consist predominantly of serum, whereas most current NUcleic-acid-Linked Immuno-Sandwich Assay (NULISA) studies use plasma.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Simvastatin Modulates Astrocyte and Microglial Reactivity and Aggressive Behavior After Chronic Sleep Deprivation in Rats.",
+          "authors": "Dias Higor Hernany, Müller Kevin Silva, Lima-da-Silva Gabriela Larissa, Alves Stephane da Silva, Martins Tatiane de Camargo, Hamamoto Filho Pedro Tadao, Horta-Júnior José de Anchieta de Castro E",
+          "journal": "Journal of neuroscience research",
+          "date": "2026 Nov",
+          "pmid": "42967864",
+          "doi": "10.1002/jnr.70160",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42967864/",
+          "source": "PubMed",
+          "topics": [
+            "Astrocytes"
+          ],
+          "relevance_score": 4,
+          "summary": "Chronic sleep deprivation (SD) disrupts central nervous system homeostasis, promoting behavioral alterations and glial remodeling within limbic structures. Although simvastatin exhibits pleiotropic effects, its influence on astrocytic and microglial responses during prolonged sleep loss remains poorly understood.",
+          "why_it_matters": "Relevant to GFAP-associated astrocyte biology."
+        },
+        {
+          "title": "Betaine Attenuates Cuprizone-Induced Cortical Demyelination: The Role of the WNT4/mTOR Signalling Pathway in Regulating Astrogliosis and Synaptic Integrity.",
+          "authors": "Said Yara M, Abd Elkader Heba-Tallah Abd Elrahim, Bekheet Gihad Jamal, Abdel Salam Sherine, Essawy Amina E",
+          "journal": "Journal of biochemical and molecular toxicology",
+          "date": "2026 Nov",
+          "pmid": "42900006",
+          "doi": "10.1002/jbt.71138",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42900006/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Cortical grey matter pathology manifests early demyelinating diseases and is a primary driver of permanent neurological impairment. Our study investigated the neuroprotective effects of betaine against cuprizone (CPZ)-induced damage to the cerebral cortex in rats, focusing on its ability to modulate the upstream WNT4/mTOR signalling pathway.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Pharmacological Modulation of Catecholaminergic Brain Injury by Dapagliflozin and Its Nanovesicular Formulation in an Isoproterenol Model.",
+          "authors": "Bhat Faisal Ashraf, Haque Syed Ehtaishamul, Aqil Mohammed, Akhtar Mohd, Najmi Abul Kalam",
+          "journal": "Journal of biochemical and molecular toxicology",
+          "date": "2026 Nov",
+          "pmid": "42893416",
+          "doi": "10.1002/jbt.71134",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42893416/",
+          "source": "PubMed",
+          "topics": [
+            "GFAP"
+          ],
+          "relevance_score": 4,
+          "summary": "Sustained β-adrenergic stimulation represents a pharmacologically relevant stressor capable of inducing systemic oxidative and inflammatory injury that extends to the central nervous system. Isoproterenol (ISO), a synthetic catecholamine, is widely used to model catecholaminergic injury in experimental settings.",
+          "why_it_matters": "Relevant to recent research involving GFAP."
+        },
+        {
+          "title": "Matcha green tea attenuates acrylamide-induced cerebellar damage in rats: Biochemical, histological and immunohistochemical study.",
+          "authors": "Essawy Asmaa S, Abo Elkhair Doaa M",
+          "journal": "Tissue & cell",
+          "date": "2026-06-23",
+          "pmid": "42341430",
+          "doi": "10.1016/j.tice.2026.103726",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341430/",
+          "source": "PubMed",
+          "topics": [
+            "Biomarker"
+          ],
+          "relevance_score": 3,
+          "summary": "In industry, acrylamide (ACR) is generated by heating tobacco and carbohydrate-rich foods. In the past decade, ACR neurotoxicity has become a growing concern.",
+          "why_it_matters": "Relevant to GFAP as a neurological biomarker."
+        }
+      ]
+    },
     {
       "week": "Week of October 26, 2026",
       "generated": "2026-10-30T12:36:55.926336+00:00",
